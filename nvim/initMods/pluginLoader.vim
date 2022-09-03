@@ -8,7 +8,7 @@ let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 let g:coc_global_extensions = ['coc-json', 'coc-eslint', 'coc-tsserver']
 
-Plug 'scrooloose/nerdtree'
+"Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'ap/vim-css-color'
 
@@ -33,6 +33,8 @@ Plug 'caenrique/nvim-toggle-terminal'
 "Plug 'glepnir/oceanic-material'
 
 Plug 'bluz71/vim-nightfly-guicolors'
+Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
+
 " remember that you always need to install the server for the color scheme to
 " work properly
 Plug 'OmniSharp/omnisharp-vim'
@@ -62,5 +64,6 @@ Plug 'codechips/coc-svelte', {'do': 'npm install'}
 Plug 'evanleck/vim-svelte'
 
 Plug 'karb94/neoscroll.nvim'
+Plug 'preservim/nerdcommenter'
 
 call plug#end()

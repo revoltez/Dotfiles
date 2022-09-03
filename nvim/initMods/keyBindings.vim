@@ -14,21 +14,18 @@ function! OpenTerminal()
 endfunction
 nnoremap <c-n> :call OpenTerminal()<CR>
 
-" use alt+hjkl to move between split/vsplit panels
-tnoremap <A-h> <C-\><C-n><C-w>h
-tnoremap <A-j> <C-\><C-n><C-w>j
-tnoremap <A-k> <C-\><C-n><C-w>k
-tnoremap <A-l> <C-\><C-n><C-w>l
-nnoremap <A-h> <C-w>h
-nnoremap <A-j> <C-w>j
-nnoremap <A-k> <C-w>k
-nnoremap <A-l> <C-w>l
 
 
-nnoremap <space><space> :bnext<CR> 
+nnoremap <space><PageUp> :bnext<CR> 
+nnoremap <space><PageDown> :bprevious<CR> 
+nnoremap <C-PageUp> :tabnext<CR> 
+nnoremap <C-PageDown> :tabprevious<CR> 
 nnoremap <space>h :Startify<CR> 
 nnoremap <space>n :tabnew <bar>terminal<CR>
+nnoremap <space>t :tabnew<CR> 
 nnoremap <space>b :Buffers<CR> 
+nnoremap <space>o :!xdg-open % &<CR>
+
 " to toggle the terminal without losing its state 
 nnoremap <C-z> :ToggleTerminal<CR>
 " these keybinding are special for fuzzy plguin
@@ -38,14 +35,12 @@ let g:fzf_action = {
   \ 'ctrl-s': 'split',
   \ 'ctrl-v': 'vsplit'
   \}
-nnoremap <space>o :!xdg-open % &<CR>
 
 map <F5> :Bc<CR>
 map <F3> :tabprevious<CR>
 map <F4> :tabnext<CR>
 
-"" keybindings coc
-
+" keybindings coc
 function! s:check_back_space() abort
 	let col = col('.') - 1
 	return !col || getline('.')[col - 1]  =~# '\s'
@@ -91,6 +86,12 @@ function! s:show_documentation()
   endif
 endfunction
 
+
+" for pyhton error 
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 let g:python3_host_prog = '/usr/bin/python3.10' " -------- Set python 3 provider
 
+
+" nerdcommenter
+let g:NERDCreateDefaultMappings = 1
+nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
