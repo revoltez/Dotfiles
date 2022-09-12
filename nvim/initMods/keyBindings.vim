@@ -42,8 +42,8 @@ map <F4> :tabnext<CR>
 
 " keybindings coc
 function! s:check_back_space() abort
-	let col = col('.') - 1
-	return !col || getline('.')[col - 1]  =~# '\s'
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 "
 if has('nvim')
@@ -55,7 +55,7 @@ if has('nvim')
 inoremap <expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<CR>"
 
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#_select_confirm()
-				\: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+                \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 
 inoremap <silent><expr> <TAB>
@@ -85,6 +85,8 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
+
+set updatetime=60
 
 
 " for pyhton error 

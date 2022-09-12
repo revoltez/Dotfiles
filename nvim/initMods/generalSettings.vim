@@ -13,3 +13,5 @@ set splitright
 set splitbelow
 filetype plugin indent on
 let mapleader = " "
+set nobackup
+set nowritebackup

@@ -101,7 +101,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias ls="exa -l"
-
+alias nvim="nice -20 nvim";
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 fm6000 -f ~/Desktop/wallpapers/Allah\ ascii.txt -color "blue" 
