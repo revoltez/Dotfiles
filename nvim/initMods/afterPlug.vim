@@ -1,4 +1,3 @@
-let g:node_client_debug = 1
 let g:coc_global_extensions = ['coc-json', 'coc-eslint', 'coc-tsserver']
 let g:coc_markdown_disabled_languages = ['javascript']
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
