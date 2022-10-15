@@ -16,8 +16,8 @@ nnoremap <c-n> :call OpenTerminal()<CR>
 
 
 
-nnoremap <space><PageUp> :bnext<CR> 
-nnoremap <space><PageDown> :bprevious<CR> 
+nnoremap <S-Right> :bnext<CR> 
+nnoremap <S-Left> :bprevious<CR> 
 nnoremap <C-PageUp> :tabnext<CR> 
 nnoremap <C-PageDown> :tabprevious<CR> 
 nnoremap <space>h :Startify<CR> 
@@ -25,8 +25,13 @@ nnoremap <space>n :tabnew <bar>terminal<CR>
 nnoremap <space>t :tabnew<CR> 
 nnoremap <space>b :Buffers<CR> 
 nnoremap <space>o :!xdg-open % &<CR>
+nnoremap <leader>y  "+y
 
+
+"Rust 
+nnoremap <space>r :RustRun<CR>
 " to toggle the terminal without losing its state 
+
 nnoremap <C-z> :ToggleTerminal<CR>
 " these keybinding are special for fuzzy plguin
 nnoremap <C-p> :FZF<CR>
@@ -97,3 +102,4 @@ let g:python3_host_prog = '/usr/bin/python3.10' " -------- Set python 3 provider
 " nerdcommenter
 let g:NERDCreateDefaultMappings = 1
 nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
+

@@ -8,7 +8,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'ap/vim-css-color'
-
 Plug 'maxmellon/vim-jsx-pretty' 
 " installed this by following instruction in their github repository
 " this is also necessary for syntax highlighting
@@ -28,7 +27,7 @@ Plug 'caenrique/nvim-toggle-terminal'
 
 "Plug 'glepnir/oceanic-material'
 
-Plug 'bluz72/vim-nightfly-guicolors'
+Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 
 Plug 'jiangmiao/auto-pairs'

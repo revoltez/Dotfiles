@@ -15,3 +15,4 @@ filetype plugin indent on
 let mapleader = " "
 set nobackup
 set nowritebackup
+set clipboard+=unnamedplus
