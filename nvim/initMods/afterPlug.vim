@@ -7,7 +7,7 @@ let g:syntastic_rust_checkers = ['cargo']
 
 let g:webdevicons_enable_airline_tabline = 1
 
-"always add th color scheme right after you ste the plug in
+""always add th color scheme right after you ste the plug in
 if (has("termguicolors"))
 set termguicolors
 endif
@@ -15,6 +15,7 @@ set background=dark
 syntax enable
 
 colorscheme nightfly
+:hi Normal guibg=NONE ctermbg=NONE
 
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1

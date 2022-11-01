@@ -104,4 +104,4 @@ alias ls="exa -l"
 alias nvim="nice -20 nvim";
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-fm6000 -f ~/Desktop/wallpapers/Allah\ ascii.txt -color "blue" 
+#fm6000 -f ~/Desktop/wallpapers/Allah\ ascii.txt -color "blue" 
