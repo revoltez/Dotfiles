@@ -26,7 +26,7 @@ nnoremap <space>t :tabnew<CR>
 nnoremap <space>b :Buffers<CR> 
 nnoremap <space>o :!xdg-open % &<CR>
 nnoremap <leader>y  "+y
-
+nnoremap <leader>u :source ~/.config/nvim/init.vim<CR>  
 
 "Rust 
 nnoremap <space>r :RustRun<CR>
@@ -77,7 +77,7 @@ inoremap <silent><expr> <TAB>
   endfunction
 
 let g:coc_snippet_next = '<tab>'
-
+nmap <leader>qf  <Plug>(coc-fix-current)
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)

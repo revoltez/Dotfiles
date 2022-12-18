@@ -12,9 +12,8 @@ Plug 'maxmellon/vim-jsx-pretty'
 " installed this by following instruction in their github repository
 " this is also necessary for syntax highlighting
 Plug 'pangloss/vim-javascript'
-
+Plug 'OmniSharp/omnisharp-vim'
 Plug 'itchyny/lightline.vim'
-
 Plug 'prettier/vim-prettier'
 "Plug 'drewtempelmeyer/palenight.vim'
 " called by coc because im using it for autocompletion
@@ -24,19 +23,13 @@ Plug 'grvcoelho/vim-javascript-snippets'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'caenrique/nvim-toggle-terminal'
-
-"Plug 'glepnir/oceanic-material'
-
+Plug 'ntk148v/vim-horizon'
 Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
-
 Plug 'jiangmiao/auto-pairs'
-
-" Plug 'dart-lang/dart-vim-plugin'
-
-"Plug 'vim-syntastic/syntastic'
+Plug 'rakr/vim-one'
 Plug 'rust-lang/rust.vim'
-
+Plug 'mhartington/oceanic-next'
 " setup lsp
 "Plug 'prabirshrestha/vim-lsp'
 "Plug 'prabirshrestha/asyncomplete.vim'

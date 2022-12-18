@@ -14,8 +14,9 @@ endif
 set background=dark
 syntax enable
 
-colorscheme nightfly
-:hi Normal guibg=NONE ctermbg=NONE
+colorscheme horizon
+"remove the default background color
+":hi Normal guibg=NONE ctermbg=NONE
 
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1

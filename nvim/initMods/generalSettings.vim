@@ -15,4 +15,5 @@ filetype plugin indent on
 let mapleader = " "
 set nobackup
 set nowritebackup
+" this is used when you need to directly copy to clipboard from vim
 set clipboard+=unnamedplus
