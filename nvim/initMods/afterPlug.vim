@@ -14,7 +14,7 @@ endif
 set background=dark
 syntax enable
 
-colorscheme horizon
+colorscheme tokyonight
 "remove the default background color
 ":hi Normal guibg=NONE ctermbg=NONE
 
@@ -36,7 +36,7 @@ let g:lightline = {
       \ 'colorscheme': 'selenized_black',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \             [ 'gitbranch', 'readonly','absolutepath', 'modified' ] ]
       \ },
       \ 'component_function': {
       \   'gitbranch': 'FugitiveHead'

@@ -105,3 +105,5 @@ alias nvim="nice -20 nvim";
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 #fm6000 -f ~/Desktop/wallpapers/Allah\ ascii.txt -color "blue" 
+
+export PATH="/home/ezio/.deta/bin:$PATH"

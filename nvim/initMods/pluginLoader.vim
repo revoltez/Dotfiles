@@ -30,11 +30,12 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'rakr/vim-one'
 Plug 'rust-lang/rust.vim'
 Plug 'mhartington/oceanic-next'
+Plug 'EdenEast/nightfox.nvim' " Vim-Plug
 " setup lsp
 "Plug 'prabirshrestha/vim-lsp'
 "Plug 'prabirshrestha/asyncomplete.vim'
 "Plug 'prabirshrestha/asyncomplete-lsp.vim'
-
+Plug 'ghifarit53/tokyonight-vim'
 
 Plug 'tomlion/vim-solidity'
 Plug 'myhere/vim-nodejs-complete'
