@@ -1,4 +1,3 @@
-
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
 -- Only required if you have packer configured as `opt`
@@ -62,12 +61,4 @@ use {
 				require"startup".setup()
 		end
 }
-use 'nvim-tree/nvim-web-devicons'
-use('jose-elias-alvarez/null-ls.nvim')
-use('MunifTanjim/prettier.nvim')
-use {
-  'nvim-lualine/lualine.nvim',
-  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-}
-use 'm4xshen/autoclose.nvim'
 end)

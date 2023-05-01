@@ -6,7 +6,7 @@ set showmatch " this will show matcing bracket or curly braces
 set wildmenu " this shows an autocomplete menu when typing
 set incsearch " both will help in the search process
 set hlsearch
-set autochdir
+"set autochdir
 
 " open new split panes to right and below
 set splitright

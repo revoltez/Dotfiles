@@ -54,6 +54,9 @@ let g:startify_lists = [
 		  \ { 'type': 'sessions',  'header': ['   ']       },
           \ { 'type': 'files',     'header': ['   ']            },
           \ ]
+if exists("g:neovide")
+ set guifont=Source\ Code\ Pro:h10
+endif
 
 "  let g:startify_header = exists('g:startify_custom_header')
 "          \ ? s:set_custom_section(startify#pad(g:startify_custom_header))

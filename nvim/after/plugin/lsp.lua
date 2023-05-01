@@ -17,7 +17,19 @@ lsp.configure('lua-language-server', {
         }
     }
 })
-
+lsp.configure('rust_analyzer',{
+  -- Server-specific settings. See `:help lspconfig-setup`
+  settings = {
+    ['rust-analyzer'] = {
+		diagnostics=
+		{
+				disabled={
+						"inactive-code"
+				}
+		}
+	},
+  },
+})
 
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
