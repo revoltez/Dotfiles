@@ -102,8 +102,12 @@ source $ZSH/oh-my-zsh.sh
 
 alias ls="exa -l"
 alias nvim="nice -20 nvim";
+alias nvid="neovide --multigrid --frame none";
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-#fm6000 -f ~/Desktop/wallpapers/Allah\ ascii.txt -color "blue" 
+#fm6000 -f ~/Desktop/wallpapers/Allah\ ascii.txt -color "blue"
 
 export PATH="/home/ezio/.deta/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
