@@ -20,8 +20,9 @@ return require('packer').startup(function(use)
 			vim.cmd('colorscheme rose-pine')
 		end
 	})
-	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+	use({'nvim-treesitter/nvim-treesitter', branch = 'v0.8.5.2',run = ':TSUpdate'})
 	use('ThePrimeagen/harpoon')
+	use('windwp/nvim-ts-autotag')
 	use('mbbill/undotree')
 	use('tpope/vim-fugitive')
 	use {
@@ -64,6 +65,7 @@ use {
 }
 use 'nvim-tree/nvim-web-devicons'
 use('jose-elias-alvarez/null-ls.nvim')
+use('neovim/nvim-lspconfig')
 use('MunifTanjim/prettier.nvim')
 use {
   'nvim-lualine/lualine.nvim',
