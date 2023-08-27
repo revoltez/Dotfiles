@@ -49,4 +49,9 @@ Plug 'evanleck/vim-svelte'
 Plug 'karb94/neoscroll.nvim'
 Plug 'preservim/nerdcommenter'
 
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'fannheyward/telescope-coc.nvim'
+
+Plug 'nvim-lua/plenary.nvim' " don't forget to add this one if you don't have it yet!
+Plug 'ThePrimeagen/harpoon'
 call plug#end()

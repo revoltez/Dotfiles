@@ -34,8 +34,10 @@ nnoremap <space>r :RustRun<CR>
 
 nnoremap <C-z> :ToggleTerminal<CR>
 " these keybinding are special for fuzzy plguin
-nnoremap <C-p> :FZF<CR>
-nnoremap <space>s :Ag<CR>
+nnoremap <C-p> :Telescope find_files<CR>
+" nnoremap <C-p> :FZF<CR>
+" nnoremap <space>s :Ag<CR>
+nnoremap <space>s :Telescope grep_string<CR>
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-s': 'split',
