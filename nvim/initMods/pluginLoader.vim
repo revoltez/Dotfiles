@@ -13,7 +13,10 @@ Plug 'maxmellon/vim-jsx-pretty'
 " this is also necessary for syntax highlighting
 Plug 'pangloss/vim-javascript'
 Plug 'OmniSharp/omnisharp-vim'
-Plug 'itchyny/lightline.vim'
+" Plug 'itchyny/lightline.vim'
+Plug 'nvim-lualine/lualine.nvim'
+" If you want to have icons in your statusline choose one of these
+Plug 'nvim-tree/nvim-web-devicons'
 Plug 'prettier/vim-prettier'
 "Plug 'drewtempelmeyer/palenight.vim'
 " called by coc because im using it for autocompletion
