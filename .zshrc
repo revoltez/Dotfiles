@@ -87,6 +87,7 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
+export EDITOR='vim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -99,15 +100,35 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-alias ls="exa -l"
+alias kc="kubectl"
+alias ls="exa -al"
 alias nvim="nice -20 nvim";
 alias nvid="neovide --multigrid --frame none";
+alias forge='~/.foundry/bin/forge'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 #fm6000 -f ~/Desktop/wallpapers/Allah\ ascii.txt -color "blue"
-
+export PATH="$PATH:$HOME/go/bin/"
 export PATH="/home/ezio/.deta/bin:$PATH"
-
+export PATH=$PATH:$HOME/.arkade/bin/
+export PATH="/home/ezio/applications/Postman:$PATH"
+export PATH=$PATH:/usr/local/go/bin
 export NVM_DIR="$HOME/.nvm"
+
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# pnpm
+export PNPM_HOME="/home/ezio/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# bun completions
+[ -s "/home/ezio/.bun/_bun" ] && source "/home/ezio/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+export DOCKER_BUILDKIT=1

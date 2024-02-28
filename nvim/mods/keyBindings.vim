@@ -3,19 +3,6 @@ map <space>f :Ranger<CR>.
 " nnoremap <silent> <C-o> :NERDTreeToggle<CR>
 map <C-o> :NERDTreeToggle %<CR>
 
-" turn terminal to normal mode with escape
-tnoremap <Esc> <C-\><C-n>
-" start terminal in insert mode
-"au BufEnter * if &buftype == 'terminal' | :startinsert | endif
-" open terminal on ctrl+n
-function! OpenTerminal()
-  split term://bash
-  resize 10
-endfunction
-nnoremap <c-n> :call OpenTerminal()<CR>
-
-
-
 nnoremap <S-Right> :bnext<CR> 
 nnoremap <S-Left> :bprevious<CR> 
 nnoremap <C-PageUp> :tabnext<CR> 
@@ -26,18 +13,16 @@ nnoremap <space>t :tabnew<CR>
 nnoremap <space>b :Buffers<CR> 
 nnoremap <space>o :!xdg-open % &<CR>
 nnoremap <leader>y  "+y
+nnoremap <leader>c  :noh<CR>
 nnoremap <leader>u :source ~/.config/nvim/init.vim<CR>  
 
-"Rust 
-nnoremap <space>r :RustRun<CR>
 " to toggle the terminal without losing its state 
-
 nnoremap <C-z> :ToggleTerminal<CR>
 " these keybinding are special for fuzzy plguin
 nnoremap <C-p> :Telescope find_files<CR>
 " nnoremap <C-p> :FZF<CR>
 " nnoremap <space>s :Ag<CR>
-nnoremap <space>s :Telescope grep_string<CR>
+nnoremap <space>s :Telescope live_grep<CR>
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-s': 'split',

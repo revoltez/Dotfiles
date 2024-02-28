@@ -7,7 +7,7 @@ let g:syntastic_rust_checkers = ['cargo']
 
 let g:webdevicons_enable_airline_tabline = 1
 
-""always add th color scheme right after you ste the plug in
+" always add the color scheme right after you set the plugin
 if (has("termguicolors"))
 set termguicolors
 endif
@@ -15,8 +15,6 @@ set background=dark
 syntax enable
 
 colorscheme tokyonight
-"remove the default background color
-":hi Normal guibg=NONE ctermbg=NONE
 
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
@@ -25,6 +23,7 @@ let g:NERDTreeStatusline = ''
 
 " this will run prettier whenever you leave insertmode 
 let g:prettier#autoformat_require_pragma = 0
+
 autocmd BufWritePre *.svelte,*.js,*.css,*.jsx,*.html,*.mjs,*.ts,*.tsx,*.json,*.graphql,*.md,*.yaml, PrettierAsync
 
 let g:syntastic_svelte_checkers = ['javascript/eslint', 'html/htmlhint']

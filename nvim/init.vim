@@ -1,7 +1,7 @@
-source $HOME/.config/nvim/initMods/generalSettings.vim " myPlugins
-source $HOME/.config/nvim/initMods/pluginLoader.vim " myPlugins
-source $HOME/.config/nvim/initMods/keyBindings.vim " myPlugins
-source $HOME/.config/nvim/initMods/afterPlug.vim " myPlugins
-source $HOME/.config/nvim/initMods/luaConfigs.vim " myPlugins
+source $HOME/.config/nvim/mods/generalSettings.vim " myPlugins
+source $HOME/.config/nvim/mods/plugins.vim " myPlugins
+source $HOME/.config/nvim/mods/keyBindings.vim " myPlugins
+source $HOME/.config/nvim/mods/afterPlug.vim " myPlugins
+source $HOME/.config/nvim/mods/lua.vim " myPlugins
 
 
