@@ -15,7 +15,8 @@ nnoremap <space>o :!xdg-open % &<CR>
 nnoremap <leader>y  "+y
 nnoremap <leader>c  :noh<CR>
 nnoremap <leader>u :source ~/.config/nvim/init.vim<CR>  
-
+" turn terminal to normal mode with escape
+tnoremap <Esc> <C-\><C-n>
 " to toggle the terminal without losing its state 
 nnoremap <C-z> :ToggleTerminal<CR>
 " these keybinding are special for fuzzy plguin
