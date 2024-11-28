@@ -1,6 +1,5 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -70,6 +69,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+
 plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
@@ -100,7 +100,7 @@ export EDITOR='vim'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias kc="kubectl"
+alias k="kubectl"
 alias ls="exa -al"
 alias nvim="nice -20 nvim";
 alias nvid="neovide --multigrid --frame none";
@@ -108,14 +108,12 @@ alias forge='~/.foundry/bin/forge'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 #fm6000 -f ~/Desktop/wallpapers/Allah\ ascii.txt -color "blue"
 export PATH="$PATH:$HOME/go/bin/"
-export PATH="/home/ezio/.deta/bin:$PATH"
 export PATH=$PATH:$HOME/.arkade/bin/
-export PATH="/home/ezio/applications/Postman:$PATH"
+export PATH="/home/ezio/Applications/:$PATH"
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$HOME/.config/emacs/bin
 export NVM_DIR="$HOME/.nvm"
 
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # pnpm
 export PNPM_HOME="/home/ezio/.local/share/pnpm"
@@ -132,3 +130,14 @@ esac
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 export DOCKER_BUILDKIT=1
+
+[[ -s "/home/ezio/.gvm/scripts/gvm" ]] && source "/home/ezio/.gvm/scripts/gvm"
+
+# fnm
+FNM_PATH="/home/ezio/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/home/ezio/.local/share/fnm:$PATH"
+  eval "`fnm env`"
+fi
+
+eval "$(fnm env --use-on-cd)"
