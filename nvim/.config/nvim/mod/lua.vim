@@ -115,4 +115,26 @@ local packer_bootstrap = ensure_packer()
 
 require('neoscroll').setup()
 
+require('avante_lib').load()
+
+require('avante').setup({
+  provider = "gemini",
+  ---@type AvanteSupportedProvider
+  openai = {
+    endpoint = "https://api.openai.com/v1",
+    model = "gpt-4o",
+    timeout = 30000, -- Timeout in milliseconds
+    temperature = 0,
+    max_tokens = 4096,
+  },
+		---@type AvanteSupportedProvider
+  gemini = {
+    endpoint = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest",
+    model = "gemini-1.5-flash-latest",
+    timeout = 30000, -- Timeout in milliseconds
+    temperature = 0,
+    max_tokens = 4096,
+  },
+})
+
 EOF
