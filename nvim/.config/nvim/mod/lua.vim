@@ -11,15 +11,7 @@ require "paq" {
 }
 
 
-require("telescope").setup({
-  extensions = {
-    coc = {
-        theme = 'ivy',
-        prefer_locations = true, -- always use Telescope locations to preview definitions/declarations/implementations etc
-    }
-  },
-})
-require('telescope').load_extension('coc')
+require("telescope").setup()
 
 -- setting up harpoon
 local harpoon = require("harpoon")
@@ -41,7 +33,6 @@ vim.keymap.set("n", "<S-Left>", function() harpoon:list():prev() end)
 vim.keymap.set("n", "<S-Right>", function() harpoon:list():next() end)
 
 -- setting up lualine
-
 if vim.g.neovide then
 		vim.o.guifont = "Source Code Pro:h7" -- text below applies for VimScript		
 		vim.g.neovide_scale_factor = 0.7
@@ -51,7 +42,7 @@ require('lualine').setup()
 
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
-  ensure_installed = { "c","go","javascript", "lua", "vim", "vimdoc", "query" },
+  ensure_installed = { "c","go","javascript", "lua", "vim", "vimdoc", "query", "python"},
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
@@ -94,7 +85,7 @@ require"startup".setup()
 
 vim.cmd("colorscheme rose-pine")
 
-
+-- setup spectre
 vim.keymap.set('n', '<leader>S', '<cmd>lua require("spectre").toggle()<CR>', {
     desc = "Toggle Spectre"
 })
@@ -121,4 +112,7 @@ local ensure_packer = function()
 end
 
 local packer_bootstrap = ensure_packer()
+
+require('neoscroll').setup()
+
 EOF

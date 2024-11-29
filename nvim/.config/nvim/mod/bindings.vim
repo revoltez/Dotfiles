@@ -3,8 +3,6 @@ map <space>f :Ranger<CR>.
 " nnoremap <silent> <C-o> :NERDTreeToggle<CR>
 map <C-o> :NERDTreeToggle %<CR>
 
-nnoremap <S-Right> :bnext<CR> 
-nnoremap <S-Left> :bprevious<CR> 
 nnoremap <C-PageUp> :tabnext<CR> 
 nnoremap <C-PageDown> :tabprevious<CR> 
 nnoremap <space>h :Startify<CR> 
@@ -79,8 +77,6 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
-
-set updatetime=60
 
 
 " for pyhton error 

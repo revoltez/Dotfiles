@@ -17,3 +17,6 @@ set nobackup
 set nowritebackup
 " this is used when you need to directly copy to clipboard from vim
 set clipboard+=unnamedplus
+
+let g:coc_global_extensions = ['coc-json', 'coc-eslint', 'coc-tsserver']
+autocmd BufWritePre *.svelte,*.js,*.css,*.jsx,*.html,*.mjs,*.ts,*.tsx,*.json,*.graphql,*.md,*.yaml, PrettierAsync
