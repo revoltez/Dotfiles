@@ -21,6 +21,7 @@ Plug 'evanleck/vim-svelte'
 Plug 'karb94/neoscroll.nvim'
 Plug 'preservim/nerdcommenter'
 Plug 'nvim-lua/plenary.nvim' 
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
 Plug 'ThePrimeagen/harpoon', {'branch': 'harpoon2'}
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'christoomey/vim-tmux-navigator'

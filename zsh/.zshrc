@@ -139,11 +139,9 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"                                                                                                                                                                                                 
 eval "$(pyenv init -)"                                            
 
-# Setting up fnm
-FNM_PATH="/home/ezio/.local/share/fnm"
+# fnm
+FNM_PATH="/home/salih/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
-  export PATH="/home/ezio/.local/share/fnm:$PATH"
+  export PATH="/home/salih/.local/share/fnm:$PATH"
   eval "`fnm env`"
 fi
-
-eval "$(fnm env --use-on-cd)"

@@ -49,8 +49,6 @@ hide_window_decorations yes
 #: the text as LTR, which FriBidi expects for terminals.
 
 # symbol_map
-# devicons
-symbol_map U+E700-U+E7C5 Symbols Nerd Font
 
 #: E.g. symbol_map U+E0A0-U+E0A3,U+E0C0-U+E0C7 PowerlineSymbols
 
@@ -2649,7 +2647,7 @@ symbol_map U+E700-U+E7C5 Symbols Nerd Font
 
 
 # BEGIN_KITTY_FONTS
-font_family      family="JetBrains Mono"
+font_family      family="JetBrainsMono Nerd Font"
 bold_font        auto
 italic_font      auto
 bold_italic_font auto
