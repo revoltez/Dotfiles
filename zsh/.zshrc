@@ -145,3 +145,6 @@ if [ -d "$FNM_PATH" ]; then
   export PATH="/home/salih/.local/share/fnm:$PATH"
   eval "`fnm env`"
 fi
+
+# Created by `pipx` on 2024-12-03 11:28:43
+export PATH="$PATH:/home/salih/.local/bin"
