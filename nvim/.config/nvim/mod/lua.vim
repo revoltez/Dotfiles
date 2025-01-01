@@ -34,7 +34,7 @@ vim.keymap.set("n", "<S-Right>", function() harpoon:list():next() end)
 
 -- setting up lualine
 if vim.g.neovide then
-		vim.o.guifont = "Source Code Pro:h7" -- text below applies for VimScript		
+		vim.o.guifont = "Source Code Pro:h5" -- text below applies for VimScript		
 		vim.g.neovide_scale_factor = 0.7
 end
 

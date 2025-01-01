@@ -1,0 +1,1 @@
+dconf load / < user.conf

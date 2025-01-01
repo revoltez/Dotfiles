@@ -19,4 +19,4 @@ set nowritebackup
 set clipboard+=unnamedplus
 
 let g:coc_global_extensions = ['coc-json', 'coc-eslint', 'coc-tsserver', 'coc-pyright','coc-snippets','coc-json','coc-yaml','coc-sh']
-autocmd BufWritePre *.svelte,*.js,*.css,*.jsx,*.html,*.mjs,*.ts,*.tsx,*.json,*.graphql,*.md,*.yaml, PrettierAsync
+autocmd BufWritePre *.svelte,*.js,*.css,*.jsx,*.html,*.mjs,*.ts,*.tsx,*.json,*.graphql,*.md, PrettierAsync
