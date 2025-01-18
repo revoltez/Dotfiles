@@ -118,7 +118,7 @@ require('neoscroll').setup()
 require('avante_lib').load()
 
 require('avante').setup({
-  provider = "gemini",
+  provider = "openai",
   ---@type AvanteSupportedProvider
   openai = {
     endpoint = "https://api.openai.com/v1",
