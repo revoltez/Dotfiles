@@ -27,6 +27,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'startup-nvim/startup.nvim'
 Plug 'nvim-pack/nvim-spectre'
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 " Setting up avante
 " Deps
 Plug 'stevearc/dressing.nvim'

@@ -1,11 +1,17 @@
 {
-	"codeLens.enable": true,
-	"snippets.ultisnips.pythonPrompt": false,
-	"languageserver": {
-		"golang": {
-			"command": "gopls",
-			"rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
-			"filetypes": ["go"]
-		}
-	}
+  "codeLens.enable": true,
+  "snippets.ultisnips.pythonPrompt": false,
+  "languageserver": {
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"]
+    }
+  },
+  "python.formatting.provider": "ruff",
+  "python.formatting.ruffPath": "ruff",
+  "pyright.inlayHints.variableTypes": false,
+  "pyright.inlayHints.parameterTypes": false,
+  "pyright.inlayHints.functionReturnTypes": false,
+  "coc.preferences.formatOnSave": true
 }

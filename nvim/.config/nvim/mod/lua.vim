@@ -83,7 +83,7 @@ require'nvim-treesitter.configs'.setup {
 }
 require"startup".setup()
 
-vim.cmd("colorscheme rose-pine")
+vim.cmd.colorscheme "catppuccin"
 
 -- setup spectre
 vim.keymap.set('n', '<leader>S', '<cmd>lua require("spectre").toggle()<CR>', {
@@ -135,6 +135,13 @@ require('avante').setup({
     temperature = 0,
     max_tokens = 4096,
   },
-})
+  windows = {
+    ---@type "right" | "left" | "top" | "bottom"
+    position = "right", 
+    wrap = true, 
+    width = 50, 
+	
+}})
+
 
 EOF
