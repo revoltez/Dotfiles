@@ -136,12 +136,6 @@ export DOCKER_BUILDKIT=1
 
 [[ -s "/home/ezio/.gvm/scripts/gvm" ]] && source "/home/ezio/.gvm/scripts/gvm"
 
-
-# Setting up pyenv
-export PYENV_ROOT="$HOME/.pyenv"                                                                                                                                                                                                                                
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"                                                                                                                                                                                                 
-eval "$(pyenv init -)"                                            
-
 # fnm
 FNM_PATH="/home/salih/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
