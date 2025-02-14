@@ -9,8 +9,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 # this should be used for ssh
-# export TERM=xterm-256color
-export TERM=xterm-kitty
+export TERM=xterm-256color
+# export TERM=xterm-kitty
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -72,9 +72,10 @@ export TERM=xterm-kitty
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions kube-ps1)
 
 source $ZSH/oh-my-zsh.sh
+PROMPT='$(kube_ps1)'$PROMPT
 
 
 # User configuration
@@ -145,3 +146,17 @@ fi
 
 # Created by `pipx` on 2024-12-03 11:28:43
 export PATH="$PATH:/home/salih/.local/bin"
+
+# fnm
+FNM_PATH="/home/sah/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/home/sah/.local/share/fnm:$PATH"
+  eval "`fnm env`"
+fi
+
+# Setting up pyenv
+export PYENV_ROOT="$HOME/.pyenv"                                                                                                                                                                                                                                
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"                                                                                                                                                                                                 
+eval "$(pyenv init -)"                                            
+
+. "$HOME/.local/bin/env"

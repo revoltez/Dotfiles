@@ -13,5 +13,6 @@
   "pyright.inlayHints.variableTypes": false,
   "pyright.inlayHints.parameterTypes": false,
   "pyright.inlayHints.functionReturnTypes": false,
-  "coc.preferences.formatOnSave": true
+  "coc.preferences.formatOnSave": true,
+  "pyright.organizeimports.provider": "ruff"
 }

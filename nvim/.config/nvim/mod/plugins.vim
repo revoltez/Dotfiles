@@ -39,5 +39,6 @@ Plug 'HakonHarnes/img-clip.nvim'
 Plug 'zbirenbaum/copilot.lua'
 " Yay, pass source=true if you want to build from source
 Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
+Plug 'brenoprata10/nvim-highlight-colors'
 
 call plug#end()
