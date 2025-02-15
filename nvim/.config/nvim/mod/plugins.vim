@@ -17,11 +17,11 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tomlion/vim-solidity'
 Plug 'codechips/coc-svelte', {'do': 'npm install'}
 Plug 'evanleck/vim-svelte'
-Plug 'karb94/neoscroll.nvim'
 Plug 'preservim/nerdcommenter'
 Plug 'nvim-lua/plenary.nvim' 
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
 Plug 'ThePrimeagen/harpoon', {'branch': 'harpoon2'}
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -31,7 +31,6 @@ Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 " Setting up avante
 " Deps
 Plug 'stevearc/dressing.nvim'
-Plug 'nvim-lua/plenary.nvim'
 Plug 'MunifTanjim/nui.nvim'
 " Optional deps
 Plug 'nvim-tree/nvim-web-devicons' "or Plug 'echasnovski/mini.icons'

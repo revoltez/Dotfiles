@@ -11,9 +11,17 @@ require "paq" {
 }
 
 
-require("telescope").load_extension('harpoon')
+-- setting up lualine
+if vim.g.neovide then
+		vim.o.guifont = "Source Code Pro:h5" -- text below applies for VimScript		
+		vim.g.neovide_scale_factor = 0.7
+end
 
--- setting up harpoon
+vim.keymap.set("n", "<C-e>", function() toggle_telescope(harpoon:list()) end,
+    { desc = "Open harpoon window" })
+
+
+
 local harpoon = require("harpoon")
 
 -- REQUIRED
@@ -21,7 +29,7 @@ harpoon:setup()
 -- REQUIRED
 
 vim.keymap.set("n", "<leader>a", function() harpoon:list():add() end)
-vim.keymap.set("n", "<C-m>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
+vim.keymap.set("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 
 vim.keymap.set("n", "<C-h>", function() harpoon:list():select(1) end)
 vim.keymap.set("n", "<C-t>", function() harpoon:list():select(2) end)
@@ -29,14 +37,32 @@ vim.keymap.set("n", "<C-n>", function() harpoon:list():select(3) end)
 vim.keymap.set("n", "<C-s>", function() harpoon:list():select(4) end)
 
 -- Toggle previous & next buffers stored within Harpoon list
-vim.keymap.set("n", "<S-Left>", function() harpoon:list():prev() end)
-vim.keymap.set("n", "<S-Right>", function() harpoon:list():next() end)
+vim.keymap.set("n", "<S-Right>", function() harpoon:list():prev() end)
+vim.keymap.set("n", "<S-Left>", function() harpoon:list():next() end)
 
--- setting up lualine
-if vim.g.neovide then
-		vim.o.guifont = "Source Code Pro:h5" -- text below applies for VimScript		
-		vim.g.neovide_scale_factor = 0.7
+local harpoon = require('harpoon')
+harpoon:setup({})
+
+-- basic telescope configuration
+local conf = require("telescope.config").values
+local function toggle_telescope(harpoon_files)
+    local file_paths = {}
+    for _, item in ipairs(harpoon_files.items) do
+        table.insert(file_paths, item.value)
+    end
+
+    require("telescope.pickers").new({}, {
+        prompt_title = "Harpoon",
+        finder = require("telescope.finders").new_table({
+            results = file_paths,
+        }),
+        previewer = conf.file_previewer({}),
+        sorter = conf.generic_sorter({}),
+    }):find()
 end
+
+vim.keymap.set("n", "<C-e>", function() toggle_telescope(harpoon:list()) end,
+    { desc = "Open harpoon window" })
 
 require('lualine').setup()
 
@@ -83,8 +109,6 @@ require'nvim-treesitter.configs'.setup {
 }
 require"startup".setup()
 
-vim.cmd.colorscheme "catppuccin"
-
 -- setup spectre
 vim.keymap.set('n', '<leader>S', '<cmd>lua require("spectre").toggle()<CR>', {
     desc = "Toggle Spectre"
@@ -112,8 +136,6 @@ local ensure_packer = function()
 end
 
 local packer_bootstrap = ensure_packer()
-
-require('neoscroll').setup()
 
 require('avante_lib').load()
 
