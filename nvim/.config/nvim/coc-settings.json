@@ -1,6 +1,6 @@
 {
   "codeLens.enable": true,
-  "snippets.ultisnips.pythonPrompt": false,
+  "snippets.ultisnips.pythonPrompt": true,
   "languageserver": {
     "golang": {
       "command": "gopls",
@@ -14,5 +14,13 @@
   "pyright.inlayHints.parameterTypes": false,
   "pyright.inlayHints.functionReturnTypes": false,
   "coc.preferences.formatOnSave": true,
-  "pyright.organizeimports.provider": "ruff"
+  "yaml.format.enable": false,
+  "yaml.validate": true,
+  "prettier.disableLanguages": ["yaml"],
+  "yaml.schemaStore.enable": true,
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-workflow.json": "/*workflow*/**/*.yml"
+  },
+  "pyright.organizeimports.provider": "ruff",
+  "snippets.ultisnips.enable": false
 }
