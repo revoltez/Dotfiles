@@ -9,13 +9,14 @@ require "paq" {
 
     { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
 }
+vim.cmd.colorscheme("rose-pine")
 
 
--- setting up lualine
-if vim.g.neovide then
-		vim.o.guifont = "Source Code Pro:h5" -- text below applies for VimScript		
-		vim.g.neovide_scale_factor = 0.7
-end
+-- -- setting up lualine
+-- if vim.g.neovide then
+-- 		vim.o.guifont = "Source Code Pro:h5" -- text below applies for VimScript		
+-- 		vim.g.neovide_scale_factor = 0.7
+-- end
 
 vim.keymap.set("n", "<C-e>", function() toggle_telescope(harpoon:list()) end,
     { desc = "Open harpoon window" })
@@ -61,7 +62,7 @@ harpoon:setup({})
 --     }):find()
 -- end
 
-require('lualine').setup()
+-- require('lualine').setup()
 
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
@@ -136,34 +137,36 @@ local packer_bootstrap = ensure_packer()
 
 require('avante_lib').load()
 
-require('avante').setup({
-  provider = "openai",
-  ---@type AvanteSupportedProvider
-  openai = {
-    endpoint = "https://api.openai.com/v1",
-    model = "gpt-4o",
-    timeout = 30000, -- Timeout in milliseconds
-    temperature = 0,
-    max_tokens = 4096,
-  },
-		---@type AvanteSupportedProvider
-  gemini = {
-    endpoint = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest",
-    model = "gemini-1.5-flash-latest",
-    timeout = 30000, -- Timeout in milliseconds
-    temperature = 0,
-    max_tokens = 4096,
-  },
-  windows = {
-    ---@type "right" | "left" | "top" | "bottom"
-    position = "right", 
-    wrap = true, 
-    width = 50, 
-	
-}})
+-- require('avante').setup({
+--   provider = "openai",
+--   ---@type AvanteSupportedProvider
+--   openai = {
+--     endpoint = "https://api.openai.com/v1",
+--     model = "gpt-4o",
+--     timeout = 30000, -- Timeout in milliseconds
+--     temperature = 0,
+--     max_tokens = 4096,
+--   },
+-- 		---@type AvanteSupportedProvider
+--   gemini = {
+--     endpoint = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest",
+--     model = "gemini-1.5-flash-latest",
+--     timeout = 30000, -- Timeout in milliseconds
+--     temperature = 0,
+--     max_tokens = 4096,
+--   },
+--   windows = {
+--     ---@type "right" | "left" | "top" | "bottom"
+--     position = "right", 
+--     wrap = true, 
+--     width = 50, 
+--
+-- }})
 
 vim.opt.termguicolors = true
 
 require('nvim-highlight-colors').setup({})
+
+vim.opt.laststatus = 0
 
 EOF

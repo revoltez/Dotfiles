@@ -7,7 +7,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'ryanoasis/vim-devicons'
 Plug 'ap/vim-css-color'
-Plug 'nvim-lualine/lualine.nvim'
+"Plug 'nvim-lualine/lualine.nvim'
 Plug 'honza/vim-snippets'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'francoiscabrol/ranger.vim'
@@ -39,5 +39,6 @@ Plug 'zbirenbaum/copilot.lua'
 " Yay, pass source=true if you want to build from source
 Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
 Plug 'brenoprata10/nvim-highlight-colors'
+Plug 'f-person/git-blame.nvim'
 
 call plug#end()

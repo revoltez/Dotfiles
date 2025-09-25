@@ -82,7 +82,7 @@ endfunction
 
 
 " for pyhton error 
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+"set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 let g:python3_host_prog = '/usr/bin/python3.10' " -------- Set python 3 provider
 
 
