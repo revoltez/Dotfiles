@@ -113,14 +113,14 @@ alias forge='~/.foundry/bin/forge'
 #fm6000 -f ~/Desktop/wallpapers/Allah\ ascii.txt -color "blue"
 export PATH="$PATH:$HOME/go/bin/"
 export PATH=$PATH:$HOME/.arkade/bin/
-export PATH="/home/ezio/Applications/:$PATH"
+export PATH="/home/$USER/Applications/:$PATH"
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/.config/emacs/bin
 export NVM_DIR="$HOME/.nvm"
 
 
 # pnpm
-export PNPM_HOME="/home/ezio/.local/share/pnpm"
+export PNPM_HOME="/home/$USER/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
@@ -128,14 +128,14 @@ esac
 # pnpm end
 
 # bun completions
-[ -s "/home/ezio/.bun/_bun" ] && source "/home/ezio/.bun/_bun"
+[ -s "/home/$USER/.bun/_bun" ] && source "/home/$USER/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 export DOCKER_BUILDKIT=1
 
-[[ -s "/home/ezio/.gvm/scripts/gvm" ]] && source "/home/ezio/.gvm/scripts/gvm"
+[[ -s "/home/$USER/.gvm/scripts/gvm" ]] && source "/home/$USER/.gvm/scripts/gvm"
 
 # fnm
 FNM_PATH="/home/salih/.local/share/fnm"
