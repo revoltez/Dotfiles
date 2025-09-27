@@ -41,4 +41,9 @@ Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
 Plug 'brenoprata10/nvim-highlight-colors'
 Plug 'f-person/git-blame.nvim'
 
+Plug 'qvalentin/helm-ls.nvim'
+Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'folke/noice.nvim'
+Plug 'MunifTanjim/nui.nvim'
+
 call plug#end()

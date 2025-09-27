@@ -167,6 +167,12 @@ vim.opt.termguicolors = true
 
 require('nvim-highlight-colors').setup({})
 
+-- this hides the status line
 vim.opt.laststatus = 0
+
+-- blankline
+require("ibl").setup()
+
+require("noice").setup()
 
 EOF

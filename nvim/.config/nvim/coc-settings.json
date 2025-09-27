@@ -1,26 +1,45 @@
 {
-  "codeLens.enable": true,
-  "snippets.ultisnips.pythonPrompt": true,
-  "languageserver": {
-    "golang": {
-      "command": "gopls",
-      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
-      "filetypes": ["go"]
-    }
-  },
-  "python.formatting.provider": "ruff",
-  "python.formatting.ruffPath": "ruff",
-  "pyright.inlayHints.variableTypes": false,
-  "pyright.inlayHints.parameterTypes": false,
-  "pyright.inlayHints.functionReturnTypes": false,
-  "coc.preferences.formatOnSave": true,
-  "yaml.format.enable": false,
-  "yaml.validate": true,
-  "prettier.disableLanguages": ["yaml"],
-  "yaml.schemaStore.enable": true,
-  "yaml.schemas": {
-    "https://json.schemastore.org/github-workflow.json": "/*workflow*/**/*.yml"
-  },
-  "pyright.organizeimports.provider": "ruff",
-  "snippets.ultisnips.enable": false
+	"codeLens.enable": true,
+	"snippets.ultisnips.pythonPrompt": true,
+	"languageserver": {
+		"helm": {
+			"command": "helm_ls",
+			"args": [
+				"serve"
+			],
+			"filetypes": [
+				"helm",
+				"helmfile"
+			],
+			"rootPatterns": [
+				"Chart.yaml"
+			]
+		},
+		"golang": {
+			"command": "gopls",
+			"rootPatterns": [
+				"go.mod",
+				".vim/",
+				".git/",
+				".hg/"
+			],
+			"filetypes": [
+				"go"
+			]
+		}
+	},
+	"python.formatting.provider": "ruff",
+	"python.formatting.ruffPath": "ruff",
+	"pyright.inlayHints.variableTypes": false,
+	"pyright.inlayHints.parameterTypes": false,
+	"pyright.inlayHints.functionReturnTypes": false,
+	"coc.preferences.formatOnSave": true,
+	"yaml.format.enable": false,
+	"yaml.validate": true,
+	"yaml.schemaStore.enable": true,
+	"yaml.schemas": {
+		"https://json.schemastore.org/github-workflow.json": "/*workflow*/**/*.yml",
+	},
+	"pyright.organizeimports.provider": "ruff",
+	"snippets.ultisnips.enable": false
 }
