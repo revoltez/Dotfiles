@@ -1,0 +1,15 @@
+session_name: dev
+windows:
+  - window_name: projects
+    panes:
+      - shell_command:
+          - cd ~/projects
+
+  - window_name: k9s
+    panes:
+      - shell_command:
+          - k9s
+
+  - window_name: misc
+    panes:
+      - shell_command: []

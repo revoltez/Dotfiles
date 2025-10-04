@@ -19,4 +19,4 @@ set nowritebackup
 " this is used when you need to directly copy to clipboard from vim
 set clipboard+=unnamedplus
 
-let g:coc_global_extensions = ['coc-json', 'coc-eslint', 'coc-tsserver', 'coc-pyright','coc-snippets','coc-json','coc-yaml','coc-sh']
+let g:coc_global_extensions = ['coc-json', 'coc-eslint', 'coc-tsserver', 'coc-pyright','coc-snippets','coc-json','coc-yaml','coc-sh', "coc-prettier"]
