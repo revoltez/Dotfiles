@@ -13,15 +13,17 @@ nnoremap <space>o :!xdg-open % &<CR>
 nnoremap <leader>y  "+y
 nnoremap <leader>c  :noh<CR>
 nnoremap <leader>u :source ~/.config/nvim/init.vim<CR>  
+nnoremap <C-p> :Telescope find_files<CR>
+ " nnoremap <C-p> :FZF<CR>
+ " nnoremap <space>s :Ag<CR>
+nnoremap <space>s :Telescope live_grep<CR>
 " turn terminal to normal mode with escape
 tnoremap <Esc> <C-\><C-n>
 " to toggle the terminal without losing its state 
 nnoremap <C-z> :ToggleTerminal<CR>
 " these keybinding are special for fuzzy plguin
-nnoremap <C-p> :Telescope find_files<CR>
 " nnoremap <C-p> :FZF<CR>
 " nnoremap <space>s :Ag<CR>
-nnoremap <space>s :Telescope live_grep<CR>
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-s': 'split',

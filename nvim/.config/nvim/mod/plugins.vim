@@ -19,12 +19,11 @@ Plug 'codechips/coc-svelte', {'do': 'npm install'}
 Plug 'evanleck/vim-svelte'
 Plug 'preservim/nerdcommenter'
 Plug 'nvim-lua/plenary.nvim' 
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
 Plug 'ThePrimeagen/harpoon', {'branch': 'harpoon2'}
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter', { 'branch': 'master', 'do': ':TSUpdate' }
 Plug 'startup-nvim/startup.nvim'
 Plug 'nvim-pack/nvim-spectre'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }

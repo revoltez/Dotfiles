@@ -6,9 +6,8 @@ require "paq" {
 
     { "rose-pine/neovim", as = "rose-pine" },
     { "lervag/vimtex", opt = true }, -- Use braces when passing options
-
-    { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
 }
+
 vim.cmd.colorscheme("rose-pine")
 
 
@@ -21,7 +20,13 @@ vim.cmd.colorscheme("rose-pine")
 vim.keymap.set("n", "<C-e>", function() toggle_telescope(harpoon:list()) end,
     { desc = "Open harpoon window" })
 
-
+require("telescope").setup({
+  defaults = {
+    preview = {
+      treesitter = false,
+    },
+  },
+})
 
 local harpoon = require("harpoon")
 
@@ -44,25 +49,24 @@ vim.keymap.set("n", "<S-Left>", function() harpoon:list():next() end)
 local harpoon = require('harpoon')
 harpoon:setup({})
 
--- -- basic telescope configuration
--- local conf = require("telescope.config").values
--- local function toggle_telescope(harpoon_files)
---     local file_paths = {}
---     for _, item in ipairs(harpoon_files.items) do
---         table.insert(file_paths, item.value)
---     end
---
---     require("telescope.pickers").new({}, {
---         prompt_title = "Harpoon",
---         finder = require("telescope.finders").new_table({
---             results = file_paths,
---         }),
---         previewer = conf.file_previewer({}),
---         sorter = conf.generic_sorter({}),
---     }):find()
--- end
 
 -- require('lualine').setup()
+
+require"startup".setup()
+
+-- setup spectre
+vim.keymap.set('n', '<leader>S', '<cmd>lua require("spectre").toggle()<CR>', {
+    desc = "Toggle Spectre"
+})
+vim.keymap.set('n', '<leader>sw', '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', {
+    desc = "Search current word"
+})
+vim.keymap.set('v', '<leader>sw', '<esc><cmd>lua require("spectre").open_visual()<CR>', {
+    desc = "Search current word"
+})
+vim.keymap.set('n', '<leader>sp', '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', {
+    desc = "Search on current file"
+})
 
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
@@ -105,21 +109,11 @@ require'nvim-treesitter.configs'.setup {
     additional_vim_regex_highlighting = false,
   },
 }
-require"startup".setup()
 
--- setup spectre
-vim.keymap.set('n', '<leader>S', '<cmd>lua require("spectre").toggle()<CR>', {
-    desc = "Toggle Spectre"
-})
-vim.keymap.set('n', '<leader>sw', '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', {
-    desc = "Search current word"
-})
-vim.keymap.set('v', '<leader>sw', '<esc><cmd>lua require("spectre").open_visual()<CR>', {
-    desc = "Search current word"
-})
-vim.keymap.set('n', '<leader>sp', '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', {
-    desc = "Search on current file"
-})
+
+
+
+
 
 
 local ensure_packer = function()
