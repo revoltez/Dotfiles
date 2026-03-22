@@ -74,7 +74,6 @@ export TERM=xterm-256color
 
 plugins=(git zsh-syntax-highlighting zsh-autosuggestions kube-ps1)
 
-source $ZSH/oh-my-zsh.sh
 PROMPT='$(kube_ps1)'$PROMPT
 
 

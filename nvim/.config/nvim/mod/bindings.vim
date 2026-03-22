@@ -20,7 +20,7 @@ nnoremap <space>s :Telescope live_grep<CR>
 " turn terminal to normal mode with escape
 tnoremap <Esc> <C-\><C-n>
 " to toggle the terminal without losing its state 
-nnoremap <C-z> :ToggleTerminal<CR>
+nnoremap <C-z> :ToggleTerm<CR>
 " these keybinding are special for fuzzy plguin
 " nnoremap <C-p> :FZF<CR>
 " nnoremap <space>s :Ag<CR>
